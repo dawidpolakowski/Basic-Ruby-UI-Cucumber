@@ -1,0 +1,12 @@
+name: 'Simple action'
+description: 'Simple action'
+author: 'dawidpolakowski@gmail.com'
+branding:
+  icon: filter
+  color: red
+runs:
+  using: 'composite'
+  steps:
+    - run: |
+        bundle exec ruby run.rb
+      shell: bash

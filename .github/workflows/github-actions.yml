@@ -1,0 +1,14 @@
+name: 'my workflow'
+on:
+  pull_request:
+    types: [opened, synchronize]
+permissions:
+  contents: read
+  statuses: write # change according to the permissions your workflow needs. For more info, visit: https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#permissions
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: org-name/worklfow-name@v1.0.0
+        env:
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }} # provided by GitHub. You can use this to access the GitHub API.
